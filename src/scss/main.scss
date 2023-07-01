@@ -1,0 +1,161 @@
+@import "./blocks/header";
+@import "./blocks/footer";
+
+
+body {
+    height: 100vh;
+    background: linear-gradient(rgb(123, 114, 114), transparent 1px), linear-gradient(90deg,rgb(123, 114, 114), transparent 1px);
+    background-size:  30px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  .box {
+    background-color: antiquewhite;
+    outline:  3px solid green;
+    border-radius: 5px;
+    width: 330px;
+    height: 330px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 5px;
+    box-sizing: border-box;
+    position: relative;
+}
+.box__inner {
+  width: 100px;
+  height: 100px;
+  outline: auto;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  box-sizing: border-box;
+
+}
+.counter{
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 110px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.red{
+  color: red;
+}
+.blue {
+  color: blue;
+}
+.green {
+  color: green;
+}
+.circle{
+  height: 100%;
+  width: 100%;
+  stroke-dasharray: 283;
+  stroke-dashoffset: 283;
+  animation-name: draw;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes draw {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.cross {
+  height: 100%;
+  width: 100%;
+}
+.first {
+  stroke-dasharray: 100px;
+  stroke-dashoffset: 100px;
+  animation-name: line1;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+}
+@keyframes line1 {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+.second {
+  stroke-dasharray: 100px;
+  stroke-dashoffset: 100px;
+  animation-name: line1;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  animation-delay: .5s;
+}
+.spanWrapper {
+  font-size: 20px;
+  font-weight: 700;
+}
+.spanNone {
+  display: none;
+}
+.span1 {
+  position: absolute;
+  top: 0px;
+  left: 10px;
+}
+.span2 {
+  position: absolute;
+  top: 0px;
+  left: 160px;
+}
+.span3 {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+}
+.span4 {
+  position: absolute;
+  top: 110px;
+  left: 10px;
+}
+.span5 {
+  position: absolute;
+  top: 110px;
+  left: 160px;
+}
+.span6 {
+  position: absolute;
+  top: 110px;
+  right: 10px;
+}
+.span7 {
+  position: absolute;
+  top: 220px;
+  left: 10px;
+}
+.span8 {
+  position: absolute;
+  top: 220px;
+  left: 160px;
+}
+.span9 {
+  position: absolute;
+  top: 220px;
+  right: 10px;
+}
+@media(max-width: 767px) {
+  .counter {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    flex-direction: column;
+  }
+}
